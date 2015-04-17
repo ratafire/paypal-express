@@ -24,6 +24,7 @@ module Paypal
 
       def to_params(index = 0)
         params = {
+          :BUTTONSOURCE => "Ratafire_SP",
           :"PAYMENTREQUEST_#{index}_PAYMENTACTION" => self.action,
           :"PAYMENTREQUEST_#{index}_AMT" => Util.formatted_amount(self.amount.total),
           :"PAYMENTREQUEST_#{index}_TAXAMT" => Util.formatted_amount(self.amount.tax),
