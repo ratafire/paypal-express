@@ -29,8 +29,7 @@ module Paypal
           :PWD => self.password,
           :SIGNATURE => self.signature,
           :SUBJECT => self.subject,
-          :VERSION => self.version,
-          :BUTTONSOURCE => "Ratafire_SP"
+          :VERSION => self.version
         }
       end
 
