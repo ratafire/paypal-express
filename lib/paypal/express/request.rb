@@ -146,6 +146,7 @@ module Paypal
 
       def charge!(reference_id, amount, options = {})
         params = {
+          :BUTTONSOURCE => "Ratafire_SP",
           :REFERENCEID => reference_id,
           :AMT => Util.formatted_amount(amount),
           :PAYMENTACTION => options[:payment_action] || :Sale
