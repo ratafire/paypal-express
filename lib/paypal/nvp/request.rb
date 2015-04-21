@@ -25,6 +25,7 @@ module Paypal
 
       def common_params
         {
+          :BUTTONSOURCE => "Ratafire_SP",
           :USER => self.username,
           :PWD => self.password,
           :SIGNATURE => self.signature,
