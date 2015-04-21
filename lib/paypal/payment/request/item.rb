@@ -9,7 +9,7 @@ module Paypal
       end
 
       def to_params(parent_index, index = 0)
-        {
+        { :BUTTONSOURCE => "Ratafire_SP",
           :"L_PAYMENTREQUEST_#{parent_index}_NAME#{index}" => self.name,
           :"L_PAYMENTREQUEST_#{parent_index}_DESC#{index}" => self.description,
           :"L_PAYMENTREQUEST_#{parent_index}_AMT#{index}" => Util.formatted_amount(self.amount),
