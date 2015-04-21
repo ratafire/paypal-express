@@ -60,21 +60,6 @@ module Paypal
         raise Exception::HttpError.new(e.http_code, e.message, e.http_body)
       end
       
-      def post_with_debugger(method, params = {})
-        response = post_without_debugger(method, params)
-        puts <<-DEBUG
-#{method}
-==========
-#{params.to_query}
-----------
-#{response}
-==========
-
-DEBUG
-        response
-      end
-      alias_method_chain :post, :debugger      
-      
       
     end
   end
